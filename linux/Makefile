@@ -9,7 +9,7 @@
 CC    = -no-pie
 GTK   = `pkg-config --libs --cflags gtk+-2.0`
 LIBS  = `pkg-config --libs libswscale libavutil`
-JPEG  = -I/opt/libjpeg-turbo/include /opt/libjpeg-turbo/lib`getconf LONG_BIT`/libturbojpeg.a
+JPEG  = `pkg-config --libs --cflags libturbojpeg`
 SRC      = src/connection.c src/decoder.c
 NO_WARN  = -Wno-pointer-to-int-cast -Wno-int-to-pointer-cast
 
